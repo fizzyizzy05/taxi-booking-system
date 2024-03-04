@@ -1,0 +1,3 @@
+This booking system is written in python and uses an SQLite3 database. Use the main.py file in order to launch the system. 
+
+The default database provided should be empty, however it is technically possible can supply your own. If you do, please make sure to follow the same table and field layout as the main provided database, otherwise it won't work properly. The database used is set in the database variable on line 13.
