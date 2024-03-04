@@ -49,7 +49,7 @@ class window():
         
         # Header label for deleting booking
         delLbl1 = Label(window.delFr, text="Delete booking", font=("Noto Sans", 12, "bold"))
-        delLbl1.grid(row=0, column=0, columnspan=3)
+        delLbl1.grid(row=0, column=0, columnspan=4)
         # Ask the user which booking to delete by ID
         delLbl2 = Label(window.delFr, text="Enter ID:")
         delLbl2.grid(row=1, column=0)
@@ -57,7 +57,7 @@ class window():
         delEtr = Entry(window.delFr)
         delEtr.grid(row=1, column=2)
         # Button for deleting booking
-        delBtn = Button(window.delFr, command = lambda: window.delete(delEtr.get(), database, user))
+        delBtn = Button(window.delFr, text="Delete", command=lambda: window.delete(delEtr.get(), database, user))
         delBtn.grid(row=1, column=3)
         
         # Open new window
@@ -65,7 +65,7 @@ class window():
         window.root.update()
         window.root.mainloop() 
 
-    def close():
+    def close(self):
         window.root.destroy()
         
     def delete(id, database, user):
